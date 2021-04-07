@@ -95,8 +95,8 @@ CREATE VIEW "v1_0"."post" AS
 ALTER VIEW "v1_0"."post" OWNER TO posthoop_view;
 
 CREATE VIEW "v1_0"."comment" AS
-  select uid, text, uid_user, url_image, created_at
-  from posthoop_post.post;
+  select uid, text, uid_user, uid_post, url_image, created_at
+  from posthoop_post.comment;
 
 ALTER VIEW "v1_0"."comment" OWNER TO posthoop_view;
 
